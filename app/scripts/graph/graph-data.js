@@ -76,7 +76,7 @@ var graphData = (function(){
                         {"category" : 3, "name": "Porto Digital", "type": "2"},
                         {"category" : 3, "name": "Porto Mídia", "type": "2"},
                         {"category" : 3, "name": "JUMP", "type": "2"},
-                        {"category" : 3, "name": "Buscapé", "type": "4"}],
+                        {"category" : 3, "name": "Buscapé", "type": "4", "description" : "O grupo buscapé foi fundado em XX e hoje em dia atua como um grupo de investimento."}],
               "directed": false,
               "multigraph": false
             }

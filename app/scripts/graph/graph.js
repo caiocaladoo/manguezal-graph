@@ -75,6 +75,13 @@ var graph = (function() {
 
       var graph;
 
+      var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>Frequency:</strong> <span style='color:red'>" + d.name + "</span>";
+    });
+
 
     function init() {
         data = graphData.init();
@@ -141,8 +148,22 @@ var graph = (function() {
            .attr("class", "node")
            .on("click", function(d){
                  if(d.fixed){
+
+                       if(d.tooltip != null || d.tooltip!= undefined){
+                             d.tooltip.destroy();
+                       }
+
                        d.fixed = false;
                  }else{
+
+
+
+                        d.tooltip = d3.tip().offset([-10,0]).attr('class', 'd3-tip')
+                        .html( d.description );
+                        svg.call(d.tooltip);
+                        d.tooltip.show();
+
+                       tip.hide(d);
                        d.fixed = true;
                  }
 
@@ -293,6 +314,8 @@ var graph = (function() {
 
         zoom.on("zoom", function() {
 
+             removeToolTip();
+
       //      var stroke = nominal_stroke;
       //      if (nominal_stroke * zoom.scale() > max_stroke) stroke = max_stroke / zoom.scale();
       // //      link.style("stroke-width", stroke);
@@ -378,6 +401,21 @@ var graph = (function() {
 
 
     }
+
+    function removeToolTip(){
+          d3.selectAll('path').each(function(d){
+
+                  if( d.tooltip != undefined){
+                        d.tooltip.destroy();
+                        d.tooltip = undefined;
+                  }
+
+                  if( d.tooltip != undefined){
+                        d.tooltip.destroy();
+                        d.tooltip = undefined;
+                  }
+       });
+   }
 
     function resize() {
       var width = window.innerWidth,
