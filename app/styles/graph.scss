@@ -2,7 +2,7 @@ svg {
   // border: 1px solid #ccc;
 }
 body {
-  font: 10px sans-serif;
+  overflow: hidden;
 }
 circle.node {
   fill: lightsteelblue;
@@ -32,4 +32,70 @@ text {
       width: 100% !important;
       margin-left: 0 !important;
       margin-right: 0 !important;
+}
+
+// new graph
+// #socialGraph, svg{
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;;
+//   top: 0;
+//   left: 0;
+//   display: inline;
+// }
+
+svg text {
+      font-family: 'Lato', sans-serif !important;
+      font-weight: 300 !important;
+      // font-size: 14px;
+      color: #1d1d1d !important;
+      text-anchor: middle;
+      cursor:pointer;
+      stroke: white;
+      text-shadow: -1px 1px 2px white;
+      transition: all .35s ease;
+}
+
+svg line, svg path, svg text {
+      stroke-opacity: 0.3;
+      stroke-width: 3px !important;
+      transition: all .35s ease;
+}
+
+.node-person {
+      fill: #EC644B;
+}
+
+.node-institutions {
+      fill: #4183D7;
+}
+
+.node-meetings {
+      fill: #F4D03F;
+}
+
+.node-group {
+      fill: #A2DED0;
+}
+
+
+.link-cowork {
+      stroke: #EC644B;
+      stroke-linecap : round;
+      stroke-dasharray : 5px, 10px;
+}
+
+.link-personal {
+      stroke: #4183D7;
+}
+
+.link-sponsored {
+      stroke: #F4D03F;
+      stroke-linecap : round;
+      stroke-dasharray : 5px, 10px;
+}
+
+.link-influenced {
+      stroke: #A2DED0;
 }

@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>manguezal graph</title>
-    <meta name="description" content="">
+    <meta name="description" content="An Interactive Social (Startup) Graph based in Recife">
+    <meta name="author" content="Caio Calado | @caiocaladoo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css(.) styles/vendor.css -->
@@ -30,12 +32,12 @@
 
 
     <div class="container">
-      <div class="header">
+      <!-- <div class="header">
         <ul class="nav nav-pills pull-right">
           <li><a href="#">About</a></li>
         </ul>
         <h3 class="text-muted">Manguezal's graph</h3>
-      </div>
+      </div> -->
 
       <!-- <div class="jumbotron">
         <h1>'Allo, 'Allo!</h1>
@@ -45,24 +47,26 @@
 
       <div class="row">
         <div class="col-lg-12 col-md-12">
-          <h4><a href="https://html5boilerplate.com/">An interactive social (startup) Graph</a></h4>
-          <p>This is a visualization for the connections that we belivied that matters. This is how we can discover and understand how great business are made.</p>
+          <h2>An Interactive Social (Startup) Graph</h2>
+          <h4>This is a visualization for the connections that we believe that matters.<br>This is how we can discover and understand how great business are made.<br>All of these great companies, awesome people, amazing events and meetings are based on Recife, PE.</h4>
+
+          <h6> Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://www.eddantas.com/">Ed Dantas</a> and <a href="https://br.linkedin.com/in/caiocalado">Caio Calado</a></h6>
         </div>
 
         <div class="col-lg-12 col-md-12">
-             <div id="socialGraph"></div>
+
        </div>
 
 
       </div>
 
 
-
-      <div class="footer">
+      <!-- <div class="footer">
         <p> Made with <span class="glyphicon glyphicon-heart"></span> by <a href="https://html5boilerplate.com/">Manguez.al</a> and <a href="https://br.linkedin.com/in/caiocalado">Caio Calado</a></p>
-      </div>
+      </div> -->
     </div>
 
+    <div id="socialGraph"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -90,8 +94,10 @@
 
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/graph/graph-data.js"></script>
+    <script src="scripts/graph/graphDict.js"></script>
+    <script src="scripts/graph/graph.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/graph/main.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
